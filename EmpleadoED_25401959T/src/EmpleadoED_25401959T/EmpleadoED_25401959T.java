@@ -2,17 +2,37 @@ package EmpleadoED_25401959T;
 
 import java.util.*;
 
+/**
+ * Ejercicio práctico examen Eval 1 ED
+ *
+ * @author Silverio Marín Marín
+ * @version 1.0
+ */
 public class EmpleadoED_25401959T {
 
    static final double FACTOR_HORA_EXTRA = 1.2;
    private String nombreCompleto, dni;
    private double salarioBasePorHora = 10.56;
 
+   /**
+    * Constructor con 3 parámetros
+    *
+    * @param nombreCompleto nombre completo en maysculas
+    * @param dni documento nacional de identidad con letra y sin espacios
+    */
    public EmpleadoED_25401959T(String nombreCompleto, String dni) {
       this.nombreCompleto = nombreCompleto;
       this.dni = dni;
    }
 
+   /**
+    * Calcula el salario bruto mensual en función del salario base por hora y
+    * las horas extras.
+    *
+    * @param horasExtra. Número de horas extra dedicadas redondeado a la baja
+    * (entero).
+    * @return Devuelve el salario bruto mensual en euros con dos decimales.
+    */
    public double getSalarioEsteMes(int horasExtra) {
       double cantidadExtra, salarioFinal;
       cantidadExtra = horasExtra * this.salarioBasePorHora * FACTOR_HORA_EXTRA;
